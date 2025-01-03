@@ -1,0 +1,132 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a2540; /* Biru navy */
+    color: #f4f8fb; /* Putih lembut */
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Dashboard section */
+.dashboard {
+    text-align: center;
+}
+
+.dashboard h2 {
+    font-size: 2rem;
+    color: #e2e8f0; /* Putih kebiruan */
+    margin-bottom: 1em;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.dashboard p {
+    margin-bottom: 2em;
+    color: #cbd5e1; /* Abu-abu terang */
+    animation: fadeIn 1s ease-in;
+}
+
+/* Stats grid */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Stat item box */
+.stat-item {
+    background-color: #133b5c; /* Biru navy lebih terang */
+    color: #f4f8fb; /* Putih lembut */
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.8s ease-in-out;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    background-color: #1e3a5f; /* Biru navy lebih terang saat hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.stat-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #cbd5e1; /* Abu-abu terang */
+}
+
+.stat-item p {
+    font-size: 1.11rem;
+    font-weight: bold;
+    margin: 0;
+    color: #f4f8fb; /* Putih lembut */
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stat-item {
+        padding: 15px;
+    }
+
+    .stat-item h3 {
+        font-size: 1rem;
+    }
+
+    .stat-item p {
+        font-size: 1.5rem;
+    }
+}
